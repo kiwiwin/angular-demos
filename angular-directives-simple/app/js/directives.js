@@ -24,3 +24,13 @@ simpleDirectives.directive('msgElement', function() {
 		templateUrl: 'partials/msg.html'
 	}
 })
+
+simpleDirectives.directive('msgScopeElement', function() {
+	return {
+		restrict: 'E',
+		scope: {
+			message: "=message"
+		},
+		templateUrl: 'partials/msg-scope.html'
+	}
+})

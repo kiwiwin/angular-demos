@@ -6,17 +6,16 @@
 		</li>
 	</ul>
 
+
 	<h3>Use directives</h3>
-
 	<div person></div>
-
 	<ul>
 		<li ng-repeat="m in messages" msg>
 		</li>
 	</ul>
 
-	<h3>Use HTML</h3>
 
+	<h3>Use HTML</h3>
 	<ul>
 		<li ng-repeat="m in messages" detail>
 		</li>
@@ -24,10 +23,17 @@
 
 
 	<h3>Restrict to Element</h3>
-
 	<ul>
 		<li ng-repeat="m in messages">
 			<msg-element></msg-element>
+		</li>
+	</ul>
+
+
+	<h3>Scope Directive</h3>
+	<ul>
+		<li ng-repeat="m in messages">
+			<msg-scope-element message="m"></msg-scope-element>
 		</li>
 	</ul>
 </div>
