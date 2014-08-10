@@ -17,6 +17,8 @@ simpleControllers.controller('SimpleCtrl', ['$scope', function ($scope) {
     name: "jack",
     age: 18
   }
+
+  $scope.format = 'M/d/yy h:mm:ss a';
 }]);
 
 simpleControllers.controller('NotSimpleCtrl', ['$scope', function ($scope) {

@@ -34,3 +34,34 @@ simpleDirectives.directive('msgScopeElement', function() {
 		templateUrl: 'partials/msg-scope.html'
 	}
 })
+
+
+
+
+//DOM manipulation
+simpleDirectives.directive('currentTime', ['$interval', 'dateFilter', function($interval, dateFilter) {
+	function link(scope, element, attrs) {
+		var format, timeoutId;
+
+		function updateTime() {
+			element.text(dateFilter(new Date(), format))
+		}
+
+		scope.$watch(attrs.currentTime, function (value) {
+			format = value;
+			updateTime();
+		})
+
+		element.on('$destroy', function() {
+			$interval.cancel(timeoutId)
+		})
+
+		timeoutId = $interval(function() {
+			updateTime();
+		}, 1000)
+	}
+
+	return {
+		link: link
+	}
+}])
