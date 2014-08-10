@@ -18,3 +18,11 @@ simpleControllers.controller('SimpleCtrl', ['$scope', function ($scope) {
     age: 18
   }
 }]);
+
+simpleControllers.controller('NotSimpleCtrl', ['$scope', function ($scope) {
+  $scope.m = {
+    from: "kiwi win",
+    to: "rococojie cao",
+    text: "hello, my dear rococojie cao"
+  }
+}]);

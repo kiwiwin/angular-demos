@@ -12,6 +12,10 @@ simpleApp.config(['$routeProvider',
         templateUrl: 'partials/simple.html',
         controller: 'SimpleCtrl'
       }).
+      when('/not-simple', {
+        templateUrl: 'partials/not-simple.html',
+        controller: 'NotSimpleCtrl'
+      }).
       otherwise({
         redirectTo: '/simple'
       });
