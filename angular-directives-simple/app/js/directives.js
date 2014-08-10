@@ -17,3 +17,10 @@ simpleDirectives.directive('detail', function() {
 		templateUrl: 'partials/msg.html'
 	}
 })
+
+simpleDirectives.directive('msgElement', function() {
+	return {
+		restrict: 'E',
+		templateUrl: 'partials/msg.html'
+	}
+})
