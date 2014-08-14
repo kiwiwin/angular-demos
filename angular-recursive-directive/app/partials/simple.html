@@ -6,25 +6,28 @@
 
 <div ng-include src="'/message.html'"></div>
 
-<h3>Step2: Know how to give ng-template a scope</h3>
+<!-- <h3>Step2: Know how to give ng-template a scope</h3>
 
-<script type="text/ng-template" id="category-tree">
+<script type="text/ng-template" id="category-tree-step-2">
 	{{ category.title }}
 </script>
 
 <div ng-repeat="category in categories" 
-	ng-include src="'category-tree'">
+	ng-include src="'category-tree-step-2'"> -->
 
 <h3>Step3: Recursive template</h3>
 
-<script type="text/ng-template" id="category-tree">
+<script type="text/ng-template" id="category-tree-step-3">
 	{{ category.title }}
 	<ul ng-if="category.categories">
-		<li ng-repeat="category in category.categories" ng-include="'category-tree'">
+		<li ng-repeat="category in category.categories" ng-include="'category-tree-step-3'">
 		</li>
 	</ul>
 </script>
 
 <ul>
-    <li ng-repeat="category in categories" ng-include="'category-tree'"></li>
+    <li ng-repeat="category in categories" ng-include="'category-tree-step-3'"></li>
 </ul>  
+
+<h3>Reference</h3>
+<a href="http://benfoster.io/blog/angularjs-recursive-templates">angularjs-recursive-templates</a>
