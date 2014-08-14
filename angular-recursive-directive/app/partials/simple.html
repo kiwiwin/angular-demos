@@ -14,3 +14,17 @@
 
 <div ng-repeat="category in categories" 
 	ng-include src="'category-tree'">
+
+<h3>Step3: Recursive template</h3>
+
+<script type="text/ng-template" id="category-tree">
+	{{ category.title }}
+	<ul ng-if="category.categories">
+		<li ng-repeat="category in category.categories" ng-include="'category-tree'">
+		</li>
+	</ul>
+</script>
+
+<ul>
+    <li ng-repeat="category in categories" ng-include="'category-tree'"></li>
+</ul>  
