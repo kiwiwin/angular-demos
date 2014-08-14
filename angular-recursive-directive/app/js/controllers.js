@@ -1,15 +1,39 @@
 var simpleControllers = angular.module('simpleControllers', []);
 
 simpleControllers.controller('SimpleCtrl', ['$scope', function ($scope) {
-  $scope.messages = [
+  $scope.categories = [
+    { 
+      title: 'Computers',
+      categories: [
+        {
+          title: 'Laptops',
+          categories: [
+            {
+              title: 'Ultrabooks'
+            },
+            {
+              title: 'Macbooks'            
+            }
+          ]
+        },
+        {
+          title: 'Desktops'
+        },
+        {
+          title: 'Tablets',
+          categories: [
+            { 
+              title: 'Apple'
+            },
+            {
+              title: 'Android'
+            }
+          ]        
+        }
+      ]
+    },
     {
-      "from": "kiwi",
-      "to": "rococojie",
-      "text": "hello, rococojie"
-    },{
-      "from": "rococojie",
-      "to": "kiwi",
-      "text": "hello, kiwi"
+      title: 'Printers'
     }
-  ]
+  ];
 }]);

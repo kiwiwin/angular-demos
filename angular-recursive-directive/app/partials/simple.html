@@ -5,3 +5,12 @@
 </script>
 
 <div ng-include src="'/message.html'"></div>
+
+<h3>Step2: Know how to give ng-template a scope</h3>
+
+<script type="text/ng-template" id="category-tree">
+	{{ category.title }}
+</script>
+
+<div ng-repeat="category in categories" 
+	ng-include src="'category-tree'">
