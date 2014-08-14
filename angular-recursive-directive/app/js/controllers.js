@@ -12,21 +12,4 @@ simpleControllers.controller('SimpleCtrl', ['$scope', function ($scope) {
       "text": "hello, kiwi"
     }
   ]
-
-  $scope.person = {
-    name: "jack",
-    age: 18
-  }
-
-  $scope.format = 'M/d/yy h:mm:ss a';
-
-  $scope.name = "kiwi";
-}]);
-
-simpleControllers.controller('NotSimpleCtrl', ['$scope', function ($scope) {
-  $scope.m = {
-    from: "kiwi win",
-    to: "rococojie cao",
-    text: "hello, my dear rococojie cao"
-  }
 }]);

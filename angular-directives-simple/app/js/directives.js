@@ -65,3 +65,19 @@ simpleDirectives.directive('currentTime', ['$interval', 'dateFilter', function($
 		link: link
 	}
 }])
+
+
+
+simpleDirectives.directive('myDialog', function() {
+	return {
+		restrict: 'E',
+		transclude: true,
+		templateUrl: 'partials/my-dialog.html',
+		scope: {
+			// name: 18
+		},
+		link: function(scope, element) {
+			scope.name = "jeff"
+		} 
+	}
+})
