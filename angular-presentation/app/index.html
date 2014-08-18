@@ -5,16 +5,22 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="js/controllers.js"></script>
   </head>
+
   <body ng-controller="PhoneListCtrl">
+
+    Search: <input ng-model="query">
+
+    <p ng-bind-template="You are searching: {{ query }} "></p>
 
     <p>Total number of phones: {{ phones.length }}</p>
 
     <ul>
-      <li ng-repeat="phone in phones">
+      <li ng-repeat="phone in phones | filter: query">
         {{phone.name}}
         <p>{{phone.snippet}}</p>
       </li>
     </ul>
 
   </body>
+
 </html>
