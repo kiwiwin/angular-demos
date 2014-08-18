@@ -1,10 +1,7 @@
 var phoneApp = angular.module('phoneApp', []);
 
-phoneApp.controller('PhoneListCtrl', function ($scope) {
-  $scope.phones = [
-    {'name': 'Nexus S',
-     'snippet': 'Fast just got faster with Nexus S.'},
-    {'name': 'Motorola XOOM™ with Wi-Fi',
-     'snippet': 'The Next, Next Generation tablet.'}
-  ];
+phoneApp.controller('PhoneListCtrl', function ($scope, $http) {
+	$http.get('phones/phones.json').success(function (data) {
+		$scope.phones = data;
+	});
 });
