@@ -7,3 +7,12 @@ Phone Snippet: <span>{{phone.snippet}}</span>
 <h3>Detail With Directive</h3>
 
 <phone-detail phone="phone"></phone-detail>
+
+
+<h3>Detail With Template/Include</h3>
+
+<script type="text/ng-template" id="detail">
+	{{phone.name}} [{{phone.snippet}}]
+</script>
+
+<p ng-include="'detail'"></div>
