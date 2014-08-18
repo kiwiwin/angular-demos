@@ -1,14 +1,14 @@
 'use strict';
 
 describe('Simple controllers', function() {
-	beforeEach(module('simpleApp'));
+	beforeEach(module('phoneApp'));
 
-	describe('simpleControllers', function() {
-		it('should get 2 messages', inject(function($controller) {
+	describe('phone controllers', function() {
+		it('should get 2 phones', inject(function($controller) {
 	    	var scope = {},
-	        	ctrl = $controller('SimpleCtrl', {$scope:scope});
+	        	ctrl = $controller('PhoneListCtrl', {$scope:scope});
 
-	      	expect(scope.messages.length).toBe(2);
+	      	expect(scope.phones.length).toBe(2);
     	}))
 	})
 });
